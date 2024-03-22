@@ -211,6 +211,7 @@ Shopify.prototype.request = function request(uri, method, key, data, headers) {
     const data = key ? body[key] : body || {};
 
     if (res.headers.link) {
+      console.log('link', res.headers.link);
       const link = parseLinkHeader(res.headers.link);
 
       if (link.next) {
