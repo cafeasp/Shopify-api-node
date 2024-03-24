@@ -157,7 +157,7 @@ Shopify.prototype.request = function request(uri, method, key, data, headers) {
     stringifyJson: this.options.stringifyJson,
     timeout: this.options.timeout
   };
-
+console.log('uri', uri);
   const afterResponse = (res) => {
     this.updateLimits(res.headers['x-shopify-shop-api-call-limit']);
     return res;
