@@ -33,6 +33,7 @@ const baseChild = {
    */
   create(parentId, params) {
     const url = this.buildUrl(parentId);
+    console.log('url',url);
     return this.shopify.request(url, 'POST', this.key, params);
   },
 
